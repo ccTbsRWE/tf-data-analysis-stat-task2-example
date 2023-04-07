@@ -20,6 +20,6 @@ def solution(p: float, x: np.array) -> tuple:
     z1 = st.gamma.ppf((1+p)/2, a = n, scale = 1/n)
     z2 = st.gamma.ppf((1-p)/2, a = n, scale = 1/n)
 
-    return 2 * (loc/(t*t) - 1/(2*t*t) + z1/(t*t)), \
-    2 * (loc/(t*t) - 1/(2*t*t) + z2/(t*t))
+    return  2 * (loc/(t*t) - 1/(2*t*t) + z2/(t*t)), \
+    2 * (loc/(t*t) - 1/(2*t*t) + z1/(t*t))
 
